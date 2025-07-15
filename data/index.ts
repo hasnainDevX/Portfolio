@@ -97,6 +97,14 @@ export const navItems = [
     },
     {
       id: 4,
+      title: "Noble Cleaning Solutions",
+      des: "Noble Cleaning Solutions is a fully responsive and modern cleaning services website. Utilizing cutting-edge technologies, this project showcases a clean, professional design and intuitive navigation, enabling customers to seamlessly explore services, pricing, and contact information.",
+      img: "/noblecleaningwebsitedesign.png",
+      iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/c.svg"],
+      link: "https://noble-cleaning-solutions.vercel.app/",
+    },
+    {
+      id: 5,
       title: "<PassCB /> - Password Manager",
       des: "A sleek and efficient password manager built with React, utilizing local storage for secure password management. This project provides a user-friendly interface to store and manage passwords, offering features such as adding, editing, and deleting entries.",
       img: "/pass2.png",
@@ -104,7 +112,7 @@ export const navItems = [
       link: "https://hasnaindevx.github.io/Password_Manager-React/",
     },
     {
-      id: 5,
+      id: 6,
       title: "GET-ME-A-CHAI",
       des: " A crowdfunding platform for creators with dynamic user profiles, secure authentication, and seamless user experience. Features Dynamic Routing Secure Authentication Profile Customization View Supporters Data Error Handling Payment Integration Technologies Next.js, Database: MongoDB, Authentication: Next-auth/Authjs, Payment Gateway: Stripe",
       img: "/fundprojects.png",

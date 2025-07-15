@@ -10,7 +10,7 @@ const Footer = () => {
         <Image src="/footer-grid.svg" alt="grid" width={100} height={100} className="w-full h-full opacity-50 "/>
       </div>
       <div className="flex flex-col items-center translate-y-11">
-        <a href="mailto:codebyte.wd@gmail.com">
+        <a href="mailto:hasnaindev01@gmail.com">
             <MagicButton 
                 title="Let's get in touch"
                 icon={<FaLocationArrow/>}
