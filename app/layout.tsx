@@ -12,8 +12,8 @@ const inter = Inter({ subsets: ["latin"] });
 const ThemeToggle = dynamic(() => import('../components/ThemeToggle'), { ssr: false });
 
 export const metadata: Metadata = {
-  title: "Portfolio Website - codebyte",
-  description: "Modern Portfolio Website with Next.js and Tailwind CSS",
+  title: "Portfolio Website - hasnaindev1",
+  description: "MERN-stack web developer building custom React & Tailwind websites for startups and small businesses. Let’s grow your brand with clean, responsive web design.",
 };
 
 export default function RootLayout({
