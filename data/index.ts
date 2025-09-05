@@ -75,6 +75,9 @@ export const navItems = [
       id: 0,
       title: "Go Quality Networks - Telecom Services",
       des: "Go Quality Networks is a modern, fully responsive telecom services website for a Houston-based business. Built with cutting-edge technologies, it features a clean, professional design and seamless navigation. The site enhances their digital presence, builds credibility, and helps attract potential customers, contributing to noticeable business growth.",
+      img: "/telecommockup.png",
+      iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/fm.svg",],
+      link: "https://go-quality-networks.com",
     },
     {
       id: 1,
