@@ -48,7 +48,7 @@ const Contact = () => {
         from_name: form.name,
         to_name: "Muhammad Hasnain",
         from_email: form.email,
-        to_email: "codebyte.wd@gmail.com",
+        to_email: "hasnaindev01@gmail.com",
         message: form.message,
       },
       'tuediucx9IlJwaGRK' // Use the public key here

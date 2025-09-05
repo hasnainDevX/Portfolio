@@ -164,16 +164,16 @@ export const navItems = [
     {
       id: 1,
       img: "/git.svg",
-      href:"https://github.com/codebyte0"
+      href:"https://github.com/hasnaindevx"
     },
     {
       id: 2,
-      img: "/twit.svg",
-      href:"https://github.com/codebyte0"
+      img: "/link.svg",
+      href:"https://www.linkedin.com/in/muhammad-hasnain-5a8b2b313/"
     },
     {
       id: 3,
-      img: "/link.svg",
-      href:"https://www.instagram.com/_code_byte"
-    },
+      img: "/instagramicon.png",
+      href:"https://www.instagram.com/hasnaindev1"
+    }
   ];
