@@ -72,15 +72,15 @@ export const navItems = [
   
   export const projects = [
     {
-      id: 0,
+      id: 1,
       title: "Go Quality Networks - Telecom Services",
       des: "Go Quality Networks is a modern, fully responsive telecom services website for a Houston-based business. Built with cutting-edge technologies, it features a clean, professional design and seamless navigation. The site enhances their digital presence, builds credibility, and helps attract potential customers, contributing to noticeable business growth.",
-      img: "/telecommockup.png",
+      img: "/telecomwebsite.png",
       iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/fm.svg",],
       link: "https://go-quality-networks.com",
     },
     {
-      id: 1,
+      id: 2,
       title: "Blitz-AI - Advance AI APP",
       des: "Blitz-AI is a modern web app MODERN UI. This project showcases an intuitive and sleek user interface that enhances user experience",
       img: "/blitz.png",
@@ -88,7 +88,7 @@ export const navItems = [
       link: "https://hasnaindevx.github.io/Blitz-AI/",
     },
     {
-      id: 2,
+      id: 3,
       title: "Maple Leaf Cleaners Plus",
       des: "Maple Leaf Cleaners Plus is a fully responsive and modern cleaning services website. Utilizing cutting-edge technologies, this project showcases a clean, professional design and intuitive navigation, enabling customers to seamlessly explore services, pricing, and contact information.",
       img: "/cleaningwebsite.png",
@@ -96,7 +96,7 @@ export const navItems = [
       link: "https://mapleleafcleanersplus.vercel.app",
     },
     {
-      id: 3,
+      id: 4,
       title: "Meta Verse - VR Games and Movies",
       des: "This project is a sleek and modern frontend user interface for a virtual reality (VR) games and movies platform. It showcases a fully responsive design with engaging visual elements and animations.",
       img: "/metaverse.png",
@@ -104,7 +104,7 @@ export const navItems = [
       link: "https://hasnaindevx.github.io/meta-verse-website/",
     },
     {
-      id: 4,
+      id: 5,
       title: "Noble Cleaning Solutions",
       des: "Noble Cleaning Solutions is a fully responsive and modern cleaning services website. Utilizing cutting-edge technologies, this project showcases a clean, professional design and intuitive navigation, enabling customers to seamlessly explore services, pricing, and contact information.",
       img: "/noblecleaningwebsitedesign.png",
@@ -112,7 +112,7 @@ export const navItems = [
       link: "https://noble-cleaning-solutions.vercel.app/",
     },
     {
-      id: 5,
+      id: 6,
       title: "<PassCB /> - Password Manager",
       des: "A sleek and efficient password manager built with React, utilizing local storage for secure password management. This project provides a user-friendly interface to store and manage passwords, offering features such as adding, editing, and deleting entries.",
       img: "/pass2.png",
@@ -120,7 +120,7 @@ export const navItems = [
       link: "https://hasnaindevx.github.io/Password_Manager-React/",
     },
     {
-      id: 6,
+      id: 7,
       title: "GET-ME-A-CHAI",
       des: " A crowdfunding platform for creators with dynamic user profiles, secure authentication, and seamless user experience. Features Dynamic Routing Secure Authentication Profile Customization View Supporters Data Error Handling Payment Integration Technologies Next.js, Database: MongoDB, Authentication: Next-auth/Authjs, Payment Gateway: Stripe",
       img: "/fundprojects.png",
