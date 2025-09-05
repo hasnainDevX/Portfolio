@@ -72,6 +72,11 @@ export const navItems = [
   
   export const projects = [
     {
+      id: 0,
+      title: "Go Quality Networks - Telecom Services",
+      des: "Go Quality Networks is a modern, fully responsive telecom services website for a Houston-based business. Built with cutting-edge technologies, it features a clean, professional design and seamless navigation. The site enhances their digital presence, builds credibility, and helps attract potential customers, contributing to noticeable business growth.",
+    },
+    {
       id: 1,
       title: "Blitz-AI - Advance AI APP",
       des: "Blitz-AI is a modern web app MODERN UI. This project showcases an intuitive and sleek user interface that enhances user experience",
