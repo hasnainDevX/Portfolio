@@ -18,7 +18,7 @@ const Home = () => {
         <Hero />
         <Grid />
         <RecentProjects />
-        <Experience />
+        {/* <Experience /> */}
         <Approach />
         <div className="relative z-0">
           <StarsCanvas />

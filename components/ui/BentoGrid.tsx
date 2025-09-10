@@ -66,7 +66,7 @@ export const BentoGridItem = ({
   return (
     <div
       className={cn(
-        " dark:bg-[rgb(4,7,29)] dark:bg-gradient-to-r dark:from-[rgba(4,7,29,1)] dark:to-[rgba(12,14,35,1)] row-span-1 rounded-3xl relative group/bento  transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4 overflow-hidden border border-white/[0.2] dark:bg-dot-indigo !text-white z-0 !shadow-[0_2.8px_2.2px_rgba(0,_0,_0,_0.034),_0_6.7px_5.3px_rgba(0,_0,_0,_0.048),_0_12.5px_10px_rgba(0,_0,_0,_0.06),_0_22.3px_17.9px_rgba(0,_0,_0,_0.072),_0_41.8px_33.4px_rgba(0,_0,_0,_0.086),_0_100px_80px_rgba(0,_0,_0,_0.12)] bg-gradient-to-r from-[#8489d1] to-[#b58be9] ",
+        " dark:bg-[rgb(4,7,29)] dark:bg-gradient-to-r dark:from-[rgba(4,7,29,1)] dark:to-[rgba(12,14,35,1)] row-span-1 rounded-3xl relative group/bento  transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4 overflow-hidden border border-white/[0.2] dark:bg-dot-indigo !text-white z-0 shadow-xl bg-gradient-to-r from-[#8489d1] to-[#b58be9] ",
         className
       )}
     >
@@ -91,7 +91,6 @@ export const BentoGridItem = ({
             } `}
         >
           <div className="w-full h-full absolute z-10">
-
             {spareImg && (
               <Image
                 width={100}
@@ -104,10 +103,6 @@ export const BentoGridItem = ({
             )}
           </div>
         </div>
-        {id === 6 && (
-          <BackgroundGradientAnimation>
-          </BackgroundGradientAnimation>
-        )}
         <div
           className={cn(
             titleClassName,

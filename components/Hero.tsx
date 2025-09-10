@@ -2,16 +2,17 @@ import { Spotlight } from "./ui/Spotlight";
 import "../app/globals.css";
 import MagicButton from "./ui/MagicButton";
 import { FaLocationArrow } from "react-icons/fa";
-import ComputerCanvas from "@/components/canvas/Computer";
+import dynamic from 'next/dynamic';
+const ComputerCanvas = dynamic(() => import('@/components/canvas/Computer'), {
+  ssr: false,
+  loading: () => <div className="w-full h-full bg-gradient-to-br from-purple-900/10 to-blue-900/10" />
+});
 
 const Hero = () => {
     return (
         <div className={`relative mb-[5rem] md:pb-20 pt-36 md:h-screen h-[30rem] z-10`}>
             <div>
-                <Spotlight className="-top-40 -left-10 md:-left-32 md:-top-20" fill="white" />
                 <Spotlight className="top-10 right-0 h-[80vh] w-[50vw]" fill="purple" />
-                <Spotlight className="top-10 left-full h-[80vh] w-[50vw]" fill="purple" />
-                <Spotlight className="top-28 left-80 h-[80vh] w-[50vw]" fill="blue" />
             </div>
 
             <div className="h-screen w-full dark:bg-grid-white/[0.03] bg-grid-black/[0.2] absolute flex items-center justify-center top-0 left-0">
