@@ -12,7 +12,7 @@ const inter = Inter({ subsets: ["latin"] });
 const ThemeToggle = dynamic(() => import('../components/ThemeToggle'), { ssr: false });
 
 export const metadata: Metadata = {
-  title: "Portfolio Website - hasnaindev1",
+  title: "Portfolio Website - hasnainwebworks",
   description: "MERN-stack web developer building custom React & Tailwind websites for startups and small businesses. Let’s grow your brand with clean, responsive web design.",
 };
 
