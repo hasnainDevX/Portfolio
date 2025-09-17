@@ -35,7 +35,6 @@ export default function RootLayout({
         </Script>
       </head>
       <body className={inter.className} suppressHydrationWarning={true}>
-        <ThemeToggle />
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

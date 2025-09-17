@@ -9,16 +9,6 @@ const Footer = () => {
       <div className="absolute left-0 -bottom-[35rem] w-full min-h-36 ">
         <Image src="/footer-grid.svg" alt="grid" width={100} height={100} className="w-full h-full opacity-50 "/>
       </div>
-      {/* <div className="flex flex-col items-center translate-y-11">
-        <a href="mailto:hasnaindev01@gmail.com">
-            <MagicButton 
-                title="Let's get in touch"
-                icon={<FaLocationArrow/>}
-                position="right"
-                otherClasses="!w-[100%]" 
-            />
-        </a>
-      </div> */}
       <div className="flex mt-20 md:flex-row flex-col justify-between items-center ">
         <p className="md:text-base text-sm md:font-normal font-light">© {new Date().getFullYear()} hasnain Webworks. All rights reserved</p>
         <div className="flex items-center md:gap-3 gap-6">
