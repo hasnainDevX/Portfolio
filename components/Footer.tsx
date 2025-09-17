@@ -1,5 +1,3 @@
-import { FaLocationArrow } from "react-icons/fa"
-import MagicButton from "./ui/MagicButton"
 import { socialMedia } from "@/data"
 import Image from "next/image"
 

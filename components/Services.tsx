@@ -4,7 +4,7 @@ import { Skiper17 } from "@/components/ui/ServiceCards";
 
 const Services = () => {
   return (
-    <div className="w-full md:!h-[315vh] !h-[340vh] c-space">
+    <div id="services" className="w-full md:!h-[315vh] !h-[340vh] c-space">
       <h1 className="heading my-12">
         Web Design and Development {" "}
         <span className="dark:text-purple text-violet-700">

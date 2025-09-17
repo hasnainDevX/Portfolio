@@ -244,7 +244,7 @@ const Skiper17 = () => {
 const defaultCards = [
   {
     id: 1,
-    image: "/foundationsite.png",
+    image: "/service1.png",
     title: "The Foundation Website",
     timeline: "1-2 weeks",
     investment: "$200-$300",
@@ -259,7 +259,7 @@ const defaultCards = [
   },
   {
     id: 2,
-    image: "/signaturesitee.png",
+    image: "/service2.png",
     title: "The Signature Site",
     timeline: "3-5 weeks",
     investment: "$500-$800",
@@ -274,7 +274,7 @@ const defaultCards = [
   },
   {
     id: 3,
-    image: "/completevision.png",
+    image: "/service3.png",
     title: "The Complete Vision",
     timeline: "5-10 weeks",
     investment: "$1000+",
