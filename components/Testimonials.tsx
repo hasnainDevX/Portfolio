@@ -36,10 +36,13 @@ export const clientReviews = [
 const Testimonials = () => {
   return (
     <section id="testimonials" className="c-space my-20">
-       <h1 className="heading">
-                Hear From My {" "}
-                <span className='dark:text-purple text-violet-700'>Clients</span>
-            </h1>
+         <div className="text-center mb-16">
+        <h1 className="text-5xl md:text-6xl font-light tracking-wide mb-12 text-white">
+            HEAR FROM MY
+            <span className="text-indigo-400"> CLIENTS</span>
+          </h1>
+
+      </div>
 
       <div className="client-container">
         {clientReviews.map((item) => (

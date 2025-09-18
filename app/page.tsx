@@ -3,13 +3,14 @@ import { navItems } from "@/data";
 import Hero from "@/components/Hero";
 import Grid from "@/components/Grid";
 import Footer from "@/components/Footer";
-// import Approach from "@/components/Approach";
+import Approach from "@/components/Approach";
 import RecentProjects from "@/components/RecentProjects";
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
 import Testimonials from "../components/Testimonials";
 import Contact from "@/components/Contact";
 import { StarsCanvas } from "@/components/canvas";
 import Services from "@/components/Services";
+import Pricing from "@/components/Pricing";
 
 const Home = () => {
   return (
@@ -19,15 +20,18 @@ const Home = () => {
         <Hero />
         <Grid />
         <Services />
+        <Pricing />
         <RecentProjects />
-        {/* <Approach /> */}
+        <div className="lg:block hidden">
+          <Approach />
+        </div>
         <Testimonials />
         <div className="relative z-0">
           <StarsCanvas />
           <Contact />
         </div>
-        <Footer />
       </div>
+      <Footer />
     </main>
   );
 };

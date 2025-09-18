@@ -16,6 +16,7 @@ interface CardData {
   wif: string;
   description: string;
   features: string[];
+  colorScheme: string; // Change this to just string
 }
 
 interface StickyCard002Props {
@@ -111,6 +112,21 @@ const StickyCard002 = ({
     { scope: container }
   );
 
+  const getColorClasses = (scheme: string) => {
+    const colors: { [key: string]: { button: string } } = {
+      indigo: {
+        button: "border-indigo-400/50 hover:bg-indigo-400/10 text-indigo-400",
+      },
+      violet: {
+        button: "border-violet-700/50 hover:bg-violet-700/10 text-violet-700",
+      },
+      rose: {
+        button: "border-rose-400/50 hover:bg-rose-400/10 text-rose-400",
+      },
+    };
+    return colors[scheme] || colors.indigo; // fallback to indigo if scheme not found
+  };
+
   return (
     <div className={cn("relative h-full w-full", className)} ref={container}>
       <div className="sticky-cards relative flex h-full w-full items-center justify-center overflow-hidden">
@@ -142,21 +158,26 @@ const StickyCard002 = ({
                 </div>
 
                 {/* Right Side - Content (full width on mobile, 3/5 on lg+) */}
-                <div className="w-full lg:w-3/5 h-full bg-gray-900 rounded-lg lg:rounded-r-2xl p-4 sm:p-6 lg:p-10 flex flex-col justify-between overflow-y-auto">
+                <div className="w-full lg:w-3/5 h-full bg-gray-900 rounded-lg lg:rounded-r-2xl p-8 sm:p-6 lg:p-10 flex flex-col justify-between overflow-y-auto">
                   <div className="space-y-4 sm:space-y-6">
                     <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-4">
                       {/* Title */}
-                      <h1 className="text-2xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold text-white leading-tight text-center md:text-left">
+                      <h1 className="text-4xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold text-white leading-tight text-center md:text-left">
                         {card.title}
                       </h1>
 
-                      <div className="learnmore text-center bg-gray-800 p-1 sm:p-2 rounded-lg hover:bg-gray-700 transition cursor-pointer shrink-0">
-                        <button>
-                          <span className="text-white text-center text-xs sm:text-sm font-medium">
-                            <span className="text-sm sm:text-lg"> &#123; </span>LEARN MORE{" "}
-                            <span className="text-sm sm:text-lg"> &#125; </span>
-                          </span>
-                        </button>
+                      <div className="learnmore text-center shrink-0">
+                        <a href="#pricing">
+                          <button
+                            className={`w-full bg-transparent border ${
+                              getColorClasses(card.colorScheme).button
+                            } font-light py-2 sm:py-3 px-4 sm:px-6 tracking-widest text-xs sm:text-sm transition-all duration-500 uppercase rounded-lg`}
+                          >
+                            <span className="text-sm sm:text-lg">{"{"}</span>
+                            LEARN MORE{" "}
+                            <span className="text-sm sm:text-lg">{"}"}</span>
+                          </button>
+                        </a>
                       </div>
                     </div>
 
@@ -193,28 +214,12 @@ const StickyCard002 = ({
                               colors[index % colors.length]
                             } pl-3 sm:pl-4`}
                           >
-                            <p className="text-white text-xs sm:text-sm font-medium tracking-wide">
+                            <p className="text-white text-sm font-medium tracking-wide">
                               {feature}
                             </p>
                           </div>
                         );
                       })}
-                    </div>
-                  </div>
-
-                  {/* Time and Price badges */}
-                  <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 mt-4 sm:mt-6">
-                    <div className="bg-gray-800 px-3 sm:px-4 py-2 rounded-xl flex items-center gap-2">
-                      <span className="text-gray-400 text-xs sm:text-sm">Timeline:</span>
-                      <span className="text-white text-xs sm:text-sm font-medium">
-                        {card.timeline}
-                      </span>
-                    </div>
-                    <div className="bg-slate-800 px-3 sm:px-4 py-2 rounded-xl flex items-center gap-2">
-                      <span className="text-gray-400 text-xs sm:text-sm">Investment:</span>
-                      <span className="text-white text-xs sm:text-sm font-semibold">
-                        {card.investment}
-                      </span>
                     </div>
                   </div>
 
@@ -241,53 +246,59 @@ const StickyCard002 = ({
 
 // Example usage component with default data
 const Skiper17 = () => {
-const defaultCards = [
-  {
-    id: 1,
-    image: "/service1.png",
-    title: "The Foundation Website",
-    timeline: "1-2 weeks",
-    investment: "$200-$300",
-    wif: "Perfect for small businesses and individuals who want a simple yet professional online presence.",
-    description: "Your digital front door that actually works - a website that loads instantly, looks professional, and turns visitors into customers without the headaches of DIY builders.",
-    features: [
-      "Get found online by customers searching for your services",
-      "Professional credibility when people look you up",
-      "Own your website completely - no monthly platform fees",
-      "Works 24/7 to showcase your expertise while you sleep",
-    ],
-  },
-  {
-    id: 2,
-    image: "/service2.png",
-    title: "The Signature Site",
-    timeline: "3-5 weeks",
-    investment: "$500-$800",
-    wif: "For growing businesses ready to stand out from competitors with a website that commands attention and builds trust.",
-    description: "Elevate your online presence with a website that commands attention and builds trust - the kind that makes potential customers think 'this business knows what they're doing.'",
-    features: [
-      "Professional presence that pre-sells your services",
-      "Attract higher-quality, ready-to-pay customers",
-      "Stand out from competitors with basic websites",
-      "Builds trust before prospects even contact you",
-    ],
-  },
-  {
-    id: 3,
-    image: "/service3.png",
-    title: "The Complete Vision",
-    timeline: "5-10 weeks",
-    investment: "$1000+",
-    wif: "For established businesses, brands, and e-commerce stores ready to automate workflows, scale operations, and deliver premium customer experiences.",
-    description: "The complete digital solution that handles complex business processes automatically - your website becomes a powerful business tool, not just a brochure.",
-    features: [
-      "Capture and nurture leads automatically",
-      "Scale your business without working more hours",
-      "Premium presence that justifies higher prices",
-      "Turns visitors into customers through smart workflows",
-    ],
-  },
-];
+  const defaultCards: CardData[] = [
+    {
+      id: 1,
+      image: "/service1.png",
+      title: "The Foundation Website",
+      timeline: "1-2 weeks",
+      investment: "$200-$300",
+      wif: "Perfect for small businesses and individuals who want a simple yet professional online presence.",
+      description:
+        "Your digital front door that actually works - a website that loads instantly, looks professional, and turns visitors into customers without the headaches of DIY builders.",
+      features: [
+        "Get found online by customers searching for your services",
+        "Professional credibility when people look you up",
+        "Own your website completely - no monthly platform fees",
+        "Works 24/7 to showcase your expertise while you sleep",
+      ],
+      colorScheme: "indigo" as const,
+    },
+    {
+      id: 2,
+      image: "/service2.png",
+      title: "The Signature Site",
+      timeline: "3-5 weeks",
+      investment: "$500-$800",
+      wif: "For growing businesses ready to stand out from competitors with a website that commands attention and builds trust.",
+      description:
+        "Elevate your online presence with a website that commands attention and builds trust - the kind that makes potential customers think 'this business knows what they're doing.'",
+      features: [
+        "Professional presence that pre-sells your services",
+        "Attract higher-quality, ready-to-pay customers",
+        "Stand out from competitors with basic websites",
+        "Builds trust before prospects even contact you",
+      ],
+      colorScheme: "violet" as const,
+    },
+    {
+      id: 3,
+      image: "/service3.png",
+      title: "The Complete Vision",
+      timeline: "5-10 weeks",
+      investment: "$1000+",
+      wif: "For established businesses, brands, and e-commerce stores ready to automate workflows, scale operations, and deliver premium customer experiences.",
+      description:
+        "The complete digital solution that handles complex business processes automatically - your website becomes a powerful business tool, not just a brochure.",
+      features: [
+        "Capture and nurture leads automatically",
+        "Scale your business without working more hours",
+        "Premium presence that justifies higher prices",
+        "Turns visitors into customers through smart workflows",
+      ],
+      colorScheme: "rose" as const,
+    },
+  ];
 
   return (
     <ReactLenis root>

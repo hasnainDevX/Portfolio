@@ -8,7 +8,7 @@ import React, {
 } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
-import { SectionWrapper } from "@/hoc";
+// import { SectionWrapper } from "@/hoc";
 import { slideIn } from "../lib/motion";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -180,14 +180,14 @@ const Contact = () => {
         theme={dark ? "dark" : "light"} // Ensures the ToastContainer reflects the current theme
         style={{ zIndex: 9999, position: "fixed" }}
       />
-      <div className="xl:mt-7 flex overflow-hidden flex-col" id="contact">
-        <div className="flex flex-col items-center md:mb-11 mb-7">
-          <h1 className="heading lg:max-w-[45vw]">
-            Ready to take{" "}
-            <span className="text-violet-700 dark:text-purple">your </span>
-            Digital presence to the next level?
+      <div className="xl:mt-7 flex overflow-hidden flex-col sm:px-16 px-6 sm:py-16 py-10 max-w-7xl mx-auto relative z-0" id="contact">
+        <div className="flex flex-col items-center md:mb-11 mb-7 text-center max-w-5xl mx-auto p-4">
+          <h1 className="text-5xl md:text-6xl font-light tracking-wide mb-12 text-white">
+            READY TO TAKE{" "}
+            <span className="text-violet-700 dark:text-purple">YOUR </span>
+            DIGITAL PRESENCE TO THE NEXT LEVEL?
           </h1>
-          <p className="dark:text-white-200 md:mt-10 my-5 text-center text-black-200">
+          <p className="dark:text-white-200 md:mt-4 my-5 text-center text-black-200">
             Reach out to me today and let’s discuss how I can help you to reach
             your goals
           </p>
@@ -308,4 +308,4 @@ const Contact = () => {
   );
 };
 
-export default SectionWrapper(Contact, "contact");
+export default Contact;
