@@ -57,10 +57,10 @@ const Contact = () => {
 
   // Budget options
   const budgetOptions = [
-    "£1,500 - £3,500 GBP",
-    "£3,500 - £4,500 GBP",
-    "£4,500 - £6,000 GBP",
-    "£6,000+ GBP",
+    "$200 - $500",
+    "$500 - $1000",
+    "$1000+",
+    "Not sure yet",
   ];
 
   // Timeline options
