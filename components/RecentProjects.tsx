@@ -9,12 +9,12 @@ import { FaLocationArrow } from "react-icons/fa";
 
 const RecentProjects = () => {
   return (
-    <div className="py-20" id="projects">
+    <div className="min-h-screen bg-slate-950" id="projects">
       <div className="text-center">
         <h1 className="text-5xl md:text-6xl font-light tracking-wide mb-10 text-white">
           Captivating and Converting
           <br />
-          <span className="text-indigo-400"> My Portfolio</span>
+          <span className="text-indigo-400"> Portfolio</span>
         </h1>
          <p className="text-lg text-gray-400 max-w-4xl mx-auto leading-loose font-light">
              Websites Built For Visionaries, Risk-Takers & Difference-Makers
