@@ -1,11 +1,12 @@
 import React from "react";
-import { Skiper17 } from "@/components/ui/ServiceCards";
+import { Skiper17 } from "@/components/ui/AnimatedServiceCards";
+import { MobileSkiper17 } from "./ServiceCards";
 
 const Services = () => {
   return (
     <div
       id="services"
-      className="w-full md:h-[360vh] h-[340vh] c-space my-20"
+      className="w-full md:h-[360vh] h-[550vh] c-space my-20 md:my-28"
     >
       <div className="text-center mb-24">
         <h1 className="text-4xl md:text-6xl font-light tracking-wide mb-12 text-white">
@@ -21,7 +22,12 @@ const Services = () => {
           that just work - because they perform.
         </p>
       </div>
-      <Skiper17 />
+       <div className="md:block hidden">
+         <Skiper17 />
+       </div>
+       <div className="block md:hidden">
+          <MobileSkiper17 />
+        </div>
     </div>
   );
 };

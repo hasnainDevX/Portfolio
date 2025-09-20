@@ -31,9 +31,9 @@ const Pricing: React.FC = () => {
         "Free hosting setup and domain guidance",
         "30 days of post-launch support",
         "5 revisions and updates",
-        "Self-managed content system - no developer needed for updates"
+        "Self-managed content system - no developer needed for updates",
       ],
-      investment: "$300",
+      investment: "$200 - $300",
       timeline: "1 – 2 weeks",
       paymentPlan: "Full payment or 2 installments available",
       buttonText: "Book Your Foundation Website",
@@ -54,9 +54,9 @@ const Pricing: React.FC = () => {
         "Analytics setup and conversion tracking",
         "Email marketing integration and lead capture forms",
         "60 days of post-launch support and updates",
-        "Self-managed content system - no developer needed for updates"
+        "Self-managed content system - no developer needed for updates",
       ],
-      investment: "$800",
+      investment: "$500 - $800",
       timeline: "2 – 3 weeks",
       paymentPlan: "2 month payment plans available",
       buttonText: "Book The Signature Site",
@@ -77,7 +77,7 @@ const Pricing: React.FC = () => {
         "Multi-platform compatibility and PWA features",
         "Ongoing maintenance and security updates included",
         "Priority support and unlimited revisions for 90 days",
-        "Custom admin panel for easy content and image updates"
+        "Custom admin panel for easy content and image updates",
       ],
       investment: "$1000+",
       timeline: "4 – 6 weeks",
@@ -115,7 +115,10 @@ const Pricing: React.FC = () => {
   };
 
   return (
-    <div id="pricing" className="min-h-screen bg-slate-950 py-24 px-6 c-space my-20">
+    <div
+      id="pricing"
+      className="min-h-screen bg-slate-950 py-24 px-6 c-space my-20"
+    >
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-24">
@@ -124,7 +127,7 @@ const Pricing: React.FC = () => {
             <span className="text-indigo-400"> INCLUDED</span>?
           </h1>
           <h2 className="text-2xl md:text-3xl font-light mb-8 text-gray-200 tracking-wide">
-            Introducing The Best Web Design For Small Business
+            Introducing The Best Web Design For Ambitious Businesses Like Yours
           </h2>
           <p className="text-lg text-gray-400 max-w-4xl mx-auto leading-loose font-light">
             There are three ways to work with me on. All are firmly established
@@ -183,11 +186,36 @@ const Pricing: React.FC = () => {
                   </div>
                 </div>
 
-                <button
-                  className={`w-full bg-transparent border ${colors.button} font-light py-4 px-6 xl:px-8 tracking-widest text-xs xl:text-sm transition-all duration-500 uppercase`}
-                >
-                  {pkg.buttonText}
-                </button>
+                <div className="mb-12 pt-8 border-t border-gray-700/50">
+                  <div className="mb-6">
+                    <span className="text-xl xl:text-2xl font-light text-white">
+                      Investment:{" "}
+                    </span>
+                    <span
+                      className={`text-xl xl:text-2xl font-light ${colors.accent}`}
+                    >
+                      {pkg.investment}
+                    </span>
+                  </div>
+                  <div className="mb-4">
+                    <span className="text-lg xl:text-xl font-light text-white">
+                      Timeline:{" "}
+                    </span>
+                    <span className="text-lg xl:text-xl font-light text-gray-300">
+                      {pkg.timeline}
+                    </span>
+                  </div>
+                  <div className="text-sm text-gray-500 italic font-light">
+                    {pkg.paymentPlan}
+                  </div>
+                </div>
+                <a href="#contact">
+                  <button
+                    className={`w-full bg-transparent border ${colors.button} font-light py-4 px-6 xl:px-8 tracking-widest text-xs xl:text-sm transition-all duration-500 uppercase`}
+                  >
+                    {pkg.buttonText}
+                  </button>
+                </a>
               </div>
             );
           })}
@@ -205,13 +233,17 @@ const Pricing: React.FC = () => {
               get you the results you're looking for.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <button className="bg-transparent border border-indigo-400/50 hover:bg-indigo-400/10 text-indigo-400 font-light py-4 px-8 tracking-widest text-sm transition-all duration-500 uppercase">
-                Schedule Free Consultation
-              </button>
+              <a href="#contact">
+                <button className="bg-transparent border border-indigo-400/50 hover:bg-indigo-400/10 text-indigo-400 font-light py-4 px-8 tracking-widest text-sm transition-all duration-500 uppercase">
+                  Schedule Free Consultation
+                </button>
+              </a>
               <span className="text-gray-500 font-light">or</span>
-              <button className="bg-indigo-400/10 border border-indigo-400/30 hover:bg-indigo-400/20 text-white font-light py-4 px-8 tracking-widest text-sm transition-all duration-500 uppercase">
-                Get Custom Quote
-              </button>
+              <a href="#contact">
+                <button className="bg-indigo-400/10 border border-indigo-400/30 hover:bg-indigo-400/20 text-white font-light py-4 px-8 tracking-widest text-sm transition-all duration-500 uppercase">
+                  Get Custom Quote
+                </button>
+              </a>
             </div>
           </div>
         </div>

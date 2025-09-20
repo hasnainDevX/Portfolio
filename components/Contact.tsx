@@ -1,6 +1,7 @@
 import React, { useState, useRef, useCallback } from "react";
 import { motion, useInView } from "framer-motion";
 import emailjs from "@emailjs/browser";
+import { SectionWrapper } from "@/hoc";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -735,4 +736,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default SectionWrapper(Contact, "contact");
