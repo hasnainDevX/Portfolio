@@ -5,21 +5,6 @@ import CanvasLoader from "../Loader";
 
 const Computers = ({ screenSize }) => {
   const computer = useGLTF("./desktop_pc/scene.gltf");
-  const [dark, setDark] = useState(true); // Default to dark mode
-
-  useEffect(() => {
-    const updateTheme = () => {
-      const mode = localStorage.getItem("theme") || "dark"; // Default to dark mode
-      setDark(mode === "dark");
-    };
-
-    updateTheme(); // Apply theme on mount
-    window.addEventListener("themeChange", updateTheme);
-
-    return () => {
-      window.removeEventListener("themeChange", updateTheme);
-    };
-  }, []);
 
   const { isMediumScreen, isLargeScreen } = screenSize;
 
@@ -33,30 +18,30 @@ const Computers = ({ screenSize }) => {
   return (
     <mesh>
       <hemisphereLight
-        intensity={dark ? 0.4 : 1.1}
-        groundColor={dark ? "black" : "white"}
+        intensity={0.4}
+        groundColor="black"
       />
       <directionalLight
         position={[-15, 40, 15]}
-        intensity={dark ? 2 : 8}
+        intensity={2}
         castShadow
         shadow-mapSize={2048}
       />
       <spotLight
         position={[-20, 50, 10]}
         angle={0.12}
-        penumbra={dark ? 1 : 0.5}
-        intensity={dark ? 3 : 8}
+        penumbra={1}
+        intensity={3}
         castShadow
         shadow-mapSize={2048}
       />
       <pointLight
-        intensity={dark ? 1.7 : 1.7}
-        color={dark ? "#D8BFD8" : "violet"}  // Light purple for dark mode
+        intensity={1.7}
+        color="#D8BFD8"  // Light purple for dark mode
       />
       <ambientLight
-        intensity={dark ? 0.6 : 1}
-        color={dark ? "#D8BFD8" : "violet"} // Light purple tint for dark mode
+        intensity={0.6}
+        color="#D8BFD8" // Light purple tint for dark mode
       />
       <primitive
         object={computer.scene}

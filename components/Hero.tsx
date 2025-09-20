@@ -15,7 +15,7 @@ const Hero = () => {
                 <Spotlight className="top-10 right-0 h-[80vh] w-[50vw]" fill="purple" />
             </div>
 
-            <div className="h-screen w-full dark:bg-grid-white/[0.03] bg-grid-black/[0.2] absolute flex items-center justify-center top-0 left-0">
+            <div className="h-screen w-full bg-grid-white/[0.03] absolute flex items-center justify-center top-0 left-0">
                 <div className="absolute pointer-events-none inset-0 flex items-center justify-center [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
             </div>
 
@@ -27,11 +27,11 @@ const Hero = () => {
                             <div className="w-1 sm:h-64 md:h-[23rem] h-[18rem] bg-[#6828f1] violet-gradient" />
                         </div>
                         <div>
-                            <h1 className="md:text-5xl text-4xl font-bold mt-11 flex flex-wrap z-[999] dark:text-white text-black-100">
+                            <h1 className="md:text-5xl text-4xl font-bold mt-11 flex flex-wrap z-[999] text-white ">
                                 <span className="mr-3 font-extrabold my-1">Hi there, I am</span>
                                 <span className="text-[#8349e0] font-extrabold font"> Hasnain</span>
                             </h1>
-                            <p className="mt-2 text-black-100 dark:text-white-100 sm:w-[60%] w-[95%] pr-2">
+                            <p className="mt-2 text-white-100 sm:w-[60%] w-[95%] pr-2">
                                 Helping you grow with a strategic website that reflects your brand and vision.
                             </p>
                             <div className="md:-my-4 my-3">

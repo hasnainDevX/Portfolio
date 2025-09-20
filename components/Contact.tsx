@@ -516,7 +516,6 @@ const Contact = () => {
               <div className="space-y-4">
                 <label className="block text-xs font-medium text-white/60 uppercase tracking-wider">
                   What is your approximate budget for the project?<span className="text-red-400 ml-1">*</span>
-                  <span className="text-white/30 text-[10px] normal-case ml-2">(Click again to deselect)</span>
                 </label>
                 <div className="grid md:grid-cols-2 gap-4">
                   {budgetOptions.map((budget) => (
@@ -579,7 +578,7 @@ const Contact = () => {
               <div className="space-y-4">
                 <label className="block text-sm font-medium text-white/70 uppercase tracking-wider">
                   What's your timeline?<span className="text-red-400 ml-1">*</span>
-                  <span className="text-white/30 text-[10px] normal-case ml-2">(Click again to deselect)</span>
+                  {/* <span className="text-white/30 text-[10px] normal-case ml-2">(Click again to deselect)</span> */}
                 </label>
                 <div className="grid md:grid-cols-2 gap-4">
                   {timelineOptions.map((timeline) => (

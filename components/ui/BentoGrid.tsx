@@ -1,13 +1,13 @@
 "use client"
 import { cn } from "@/lib/utils";
-import { BackgroundGradientAnimation } from "./BgGradient";
 import { GlobeDemo } from "./GridGlobe";
 import Lottie from "react-lottie";
 import animationData from "@/data/confetti.json"
 import MagicButton from "./MagicButton";
 import { FaSubscript } from "react-icons/fa";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Image from "next/image";
+
 export const BentoGrid = ({
   className,
   children,
@@ -15,19 +15,6 @@ export const BentoGrid = ({
   className?: string;
   children?: React.ReactNode;
 }) => {
-  const [dark, setDark] = useState(false);
-  useEffect(() => {
-    const updateTheme = () => {
-      const mode = localStorage.getItem("theme") || "system";
-      setDark(mode === "dark");
-    };
-    updateTheme();
-    window.addEventListener("themeChange", updateTheme);
-    return () => {
-      window.removeEventListener("themeChange", updateTheme);
-    };
-  }, []);
-
   return (
     <div
       className={cn(
@@ -39,6 +26,7 @@ export const BentoGrid = ({
     </div>
   );
 };
+
 export const BentoGridItem = ({
   className,
   title,
@@ -59,14 +47,16 @@ export const BentoGridItem = ({
   titleClassName?: string;
 }) => {
   const [copied, setcopied] = useState(false)
+  
   const handlecopy = () => {
     navigator.clipboard.writeText("codebyte.wd@gmail.com")
     setcopied(true)
   }
+  
   return (
     <div
       className={cn(
-        " dark:bg-[rgb(4,7,29)] dark:bg-gradient-to-r dark:from-[rgba(4,7,29,1)] dark:to-[rgba(12,14,35,1)] row-span-1 rounded-3xl relative group/bento  transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4 overflow-hidden border border-white/[0.2] dark:bg-dot-indigo !text-white z-0 shadow-xl bg-gradient-to-r from-[#8489d1] to-[#b58be9] ",
+        "bg-[rgb(4,7,29)] bg-gradient-to-r from-[rgba(4,7,29,1)] to-[rgba(12,14,35,1)] row-span-1 rounded-3xl relative group/bento transition duration-200 justify-between flex flex-col space-y-4 overflow-hidden border border-white/[0.2] bg-dot-indigo !text-white z-0",
         className
       )}
     >
@@ -85,10 +75,8 @@ export const BentoGridItem = ({
           )}
         </div>
 
-
         <div
-          className={`absolute right-0 -bottom-5 ${id === 5 && "w-full dark:opacity-80"
-            } `}
+          className={`absolute right-0 -bottom-5 ${id === 5 && "w-full opacity-80"}`}
         >
           <div className="w-full h-full absolute z-10">
             {spareImg && (
@@ -103,6 +91,7 @@ export const BentoGridItem = ({
             )}
           </div>
         </div>
+        
         <div
           className={cn(
             titleClassName,
@@ -112,10 +101,10 @@ export const BentoGridItem = ({
           <div className="font-sans font-extralight md:max-w-32 md:text-xs lg:text-base text-sm text-[#C1C2D3] z-10">
             {description}
           </div>
-          <div
-            className={`font-sans text-lg lg:text-3xl max-w-96 font-bold z-10`}  >
+          <div className={`font-sans text-lg lg:text-3xl max-w-96 font-bold z-10`}>
             {title}
           </div>
+          
           {/* for the github 3d globe */}
           {id === 2 &&
             <GlobeDemo />

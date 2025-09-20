@@ -15,38 +15,7 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
-
-    --primary: 240 5.9% 10%;
-    --primary-foreground: 0 0% 98%;
-
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
-
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
-
-    --accent: 240 4.8% 95.9%;
-    --accent-foreground: 240 5.9% 10%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 240 10% 3.9%;
-
-    --radius: 0.5rem;
-  }
-
-  .dark {
+    /* Force dark mode variables by default */
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
 
@@ -74,12 +43,15 @@
     --border: 240 3.7% 15.9%;
     --input: 240 3.7% 15.9%;
     --ring: 240 4.9% 83.9%;
+
+    --radius: 0.5rem;
   }
 }
+
 :root {
-  --scrollbar-bg: #f0f0f0;
-  --scrollbar-thumb: #7b02cc;
-  --scrollbar-thumb-hover: #53039e;
+  --scrollbar-bg: #1c1c1c;
+  --scrollbar-thumb: #333333;
+  --scrollbar-thumb-hover: #444444;
 }
 
 ::-webkit-scrollbar {
@@ -94,11 +66,6 @@
 ::-webkit-scrollbar-thumb:hover {
   background-color: var(--scrollbar-thumb-hover);
 }
-.dark {
-  --scrollbar-bg: #1c1c1c;
-  --scrollbar-thumb: #333333;
-  --scrollbar-thumb-hover: #444444;
-}
 
 @media (max-width: 490px) {
   .new{
@@ -111,24 +78,13 @@
     width: 10.45rem !important;
   }
 }
-.contact-light {
-  background: white;
-}
 
 .contact-dark {
-  background: rgba(11, 7, 49, 0.068); /* Dark mode background */
+  background: rgba(11, 7, 49, 0.068);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
 }
-.h3-light{
-  color: #7c3aed;
-}
 
-.bg-dot-indigo {
-  background-color: #ae8dfc; /* Tailwind's indigo-500 */
-  background-image: radial-gradient(circle, rgba(7, 4, 36, 0.164) 1px, transparent 2px);
-  background-size: 15px 15px; /* Adjust the size of the dots */
-}
 
 @layer base {
   * {
@@ -136,6 +92,9 @@
   }
   body {
     @apply bg-background text-foreground;
+    /* Force dark background as fallback */
+    background-color: #0f172a !important;
+    color: #f8fafc !important;
   }
   button {
     @apply active:outline-none;
@@ -176,7 +135,7 @@
   transform: translateZ(0);
 }
 
-@keyframes mulShdSpin {
+/* @keyframes mulShdSpin {
   0%,
   100% {
     box-shadow: 0em -2.6em 0em 0em #ffffff,
@@ -251,7 +210,7 @@
       -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.5),
       -2.6em 0em 0 0em rgba(255, 255, 255, 0.7), -1.8em -1.8em 0 0em #ffffff;
   }
-}
+} */
 
 /* clients section */
 .client-container {

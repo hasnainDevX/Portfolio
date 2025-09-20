@@ -11,7 +11,6 @@ import Contact from "@/components/Contact";
 import { StarsCanvas } from "@/components/canvas";
 import Services from "@/components/Services";
 import Pricing from "@/components/Pricing";
-import { MobileSkiper17 } from "@/components/ServiceCards";
 
 const Home = () => {
   return (
