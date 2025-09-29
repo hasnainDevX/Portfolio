@@ -314,7 +314,7 @@ const Contact = () => {
 
       <div
         ref={containerRef}
-        className="xl:mt-7 flex overflow-hidden flex-col sm:px-16 px-6 sm:py-16 py-10 max-w-7xl mx-auto relative z-0"
+        className="xl:mt-7 flex overflow-hidden flex-col sm:px-16 px-3 sm:py-16 py-10 max-w-7xl mx-auto relative z-0"
         id="contact"
       >
         {/* Decorative Elements */}
