@@ -15,7 +15,7 @@ import Pricing from "@/components/Pricing";
 const Home = () => {
   return (
     <main className="relative bg-slate-200 dark:bg-black-100 flex justify-center items-center flex-col mx-auto sm:px-10 px-5 overflow-clip z-0">
-      <div className="max-w-7xl w-full z-10">
+      <div className="max-w-7xl xl:max-w-[90rem] w-full z-10">
         <FloatingNav navItems={navItems} />
         <Hero />
         <Grid />

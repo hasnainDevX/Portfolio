@@ -302,7 +302,7 @@ const Skiper17 = () => {
 
   return (
     <ReactLenis root>
-      <div className="h-screen w-full">
+      <div className="h-screen] w-full">
         <StickyCard002
           cards={defaultCards}
           containerClassName="rounded-2xl shadow-2xl"

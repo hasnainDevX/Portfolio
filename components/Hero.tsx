@@ -48,7 +48,7 @@ const Hero = () => {
                     </div>
                 </div>
 
-                <div className="hidden image-part -translate-x-1 md:flex-[0_0_67%] md:flex items-center border-white md:h-[130%] md:-translate-y-16">
+                <div className="hidden image-part -translate-x-1 md:flex-[0_0_67%] md:flex items-center border-white md:h-[130%] xl:h-[100%] 2xl:h-[80%] md:-translate-y-16">
                     <ComputerCanvas />
                 </div>
             </div>

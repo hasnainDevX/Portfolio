@@ -49,14 +49,14 @@ export const BentoGridItem = ({
   const [copied, setcopied] = useState(false)
   
   const handlecopy = () => {
-    navigator.clipboard.writeText("codebyte.wd@gmail.com")
+    navigator.clipboard.writeText("hasnainwebworks@gmail.com")
     setcopied(true)
   }
   
   return (
     <div
       className={cn(
-        "bg-[rgb(4,7,29)] bg-gradient-to-r from-[rgba(4,7,29,1)] to-[rgba(12,14,35,1)] row-span-1 rounded-3xl relative group/bento transition duration-200 justify-between flex flex-col space-y-4 overflow-hidden border border-white/[0.2] bg-dot-indigo !text-white z-0",
+        "bg-[rgb(4,7,29)] bg-gradient-to-r from-[rgba(4,7,29,1)] to-[rgba(12,14,35,1)] row-span-1 rounded-3xl relative group/bento transition duration-200 justify-between flex flex-col space-y-4 overflow-hidden border border-white/[0.2] bg-dot-indigo !text-white z-0 mb-8",
         className
       )}
     >

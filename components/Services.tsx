@@ -6,7 +6,7 @@ const Services = () => {
   return (
     <div
       id="services"
-      className="w-full md:h-[360vh] h-[550vh] c-space my-20 md:my-28"
+      className="w-full c-space my-20 md:my-28"
     >
       <div className="text-center mb-24">
         <h1 className="text-4xl md:text-6xl font-light tracking-wide mb-12 text-white">
@@ -22,10 +22,10 @@ const Services = () => {
           that just work - because they perform.
         </p>
       </div>
-       <div className="md:block hidden">
+       <div className="md:block hidden 2xl:hidden">
          <Skiper17 />
        </div>
-       <div className="block md:hidden">
+       <div className="block md:hidden 2xl:block">
           <MobileSkiper17 />
         </div>
     </div>
