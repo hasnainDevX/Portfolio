@@ -184,8 +184,8 @@ const Contact = () => {
 
     try {
       await emailjs.send(
-        "service_8i8yjis",
-        "template_jzl1wm7",
+        "service_e2zm3kl",
+        "template_ampmnuo",
         {
           from_name: `${form.firstName} ${form.lastName}`,
           to_name: "Muhammad Hasnain",
@@ -198,7 +198,7 @@ const Contact = () => {
           timeline: form.timeline,
           message: form.message || "No additional message",
         },
-        "LnufNtBlctM0A6DHN"
+        "rY3JMVuy3R264K20Z"
       );
 
       toast.success(
