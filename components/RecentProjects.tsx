@@ -14,11 +14,11 @@ const RecentProjects = () => {
         <h1 className="text-5xl md:text-6xl font-light tracking-wide mb-10 text-white">
           Captivating and Converting
           <br />
-          <span className="text-indigo-400"> Portfolio</span>
+          <span className="text-indigo-400">Portfolio</span>
         </h1>
-         <p className="text-lg text-gray-400 max-w-4xl mx-auto leading-loose font-light">
-             Websites Built For Visionaries, Risk-Takers & Difference-Makers
-          </p>
+        <p className="text-lg text-gray-400 max-w-4xl mx-auto leading-loose font-light">
+          Websites Built For Visionaries, Risk-Takers & Difference-Makers
+        </p>
       </div>
       <div className="flex flex-wrap p-4 mt-8 justify-center items-center gap-x-20">
         {projects.map(({ id, title, des, img, iconLists, link }, index) => (
@@ -39,18 +39,20 @@ const RecentProjects = () => {
                   />
                 </div>
                 <Image
-                  layout="fill" // Changed from "responsive" to "fill"
+                  layout="fill"
                   src={img}
                   alt={title}
                   className={`z-10 absolute top-0 ${
-                    index === 0 ? "w-full h-full" : " object-cover object-top "
+                    index ===  0|| index === 1
+                      ? "object-cover object-center"
+                      : " object-cover object-top "
                   }`}
                 />
               </div>
               <h1 className="font-bold lg:text-2xl text-base md:text-xl line-clamp-1 ">
                 {title}{" "}
               </h1>
-              <p className="lg:text-xl lg:font-normal font-light text-sm line-clamp-2">
+              <p className="lg:text-lg lg:font-base font-light text-sm line-clamp-2">
                 {" "}
                 {des}{" "}
               </p>
