@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
+<<<<<<< HEAD
 import { CanvasRevealEffect } from "@/components/ui/CanvasRevealEffect";
 
 const Approach = () => {
@@ -12,8 +13,28 @@ const Approach = () => {
             <span className="text-indigo-400"> Process</span>
           </h1>
       </div>
+=======
+import dynamic from "next/dynamic";
+
+const CanvasRevealEffect = dynamic(
+  () =>
+    import("@/components/ui/CanvasRevealEffect").then((m) => ({
+      default: m.CanvasRevealEffect,
+    })),
+  {
+    ssr: false,
+  }
+);
+const Approach = () => {
+  return (
+    <section className="w-full py-20 ">
+      <h1 className="heading">
+        My <span className="dark:text-purple text-violet-700">Approach</span>
+      </h1>
+>>>>>>> 5bb81ed (removed vercel analytics)
       <div className="my-20 flex flex-col lg:flex-row items-center justify-center gap-4">
-        <Card title="Planning & Strategy"
+        <Card
+          title="Planning & Strategy"
           icon={<AceternityIcon order="Phase-1" />}
           description="We'll collaborate to map out your website's goals, target audience, and key functionalities. We'll discuss things like site structure, navigation, and content requirements."
         >
@@ -22,7 +43,8 @@ const Approach = () => {
             containerClassName="bg-emerald-900"
           />
         </Card>
-        <Card title="Development & Progress Updates"
+        <Card
+          title="Development & Progress Updates"
           icon={<AceternityIcon order="Phase-2" />}
           description="Once we agree on the plan, I cue my lofi playlist and dive into coding. From initial sketches to polished code, I keep you updated every step of the way."
         >
@@ -36,7 +58,12 @@ const Approach = () => {
             dotSize={3}
           />
         </Card>
+<<<<<<< HEAD
         <Card title="Development & Launch" 
+=======
+        <Card
+          title="Development & Launch"
+>>>>>>> 5bb81ed (removed vercel analytics)
           icon={<AceternityIcon order="Phase-3" />}
           description="This is where the magic happens! Based on the approved design, I'll translate everything into functional code, building your website from the ground up."
         >
@@ -49,7 +76,7 @@ const Approach = () => {
       </div>
     </section>
   );
-}
+};
 
 const Card = ({
   title,
@@ -74,29 +101,37 @@ const Card = ({
       <Icon className="absolute h-6 w-6 -top-3 -right-3 text-white" />
       <Icon className="absolute h-6 w-6 -bottom-3 -right-3 text-white" />
 
-      <AnimatePresence>
-        {hovered && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className="h-full w-full absolute inset-0"
-          >
-            {children}
-          </motion.div>
-        )}
-      </AnimatePresence>
+      <div
+        className={`h-full w-full absolute inset-0 transition-opacity duration-200 ${
+          hovered ? "opacity-100" : "opacity-0 pointer-events-none"
+        }`}
+      >
+        {hovered && children}
+      </div>
 
       <div className="relative z-20">
+<<<<<<< HEAD
         <div className="text-center group-hover/canvas-card:-translate-y-4 absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] group-hover/canvas-card:opacity-0 transition duration-200 w-full mx-auto flex items-center justify-center flex-col gap-y-6">
           <div>
             {icon}
           </div>
+=======
+        <div className="text-center group-hover/canvas-card:-translate-y-4 absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] group-hover/canvas-card:opacity-0 transition duration-200 w-full  mx-auto flex items-center justify-center flex-col gap-y-6">
+          <div>{icon}</div>
+>>>>>>> 5bb81ed (removed vercel analytics)
           <div className="text-lg text-white z-50">Hover to reveal</div>
         </div>
         <h2 className="text-white text-3xl opacity-0 group-hover/canvas-card:opacity-100 relative z-10 mt-4 font-bold group-hover/canvas-card:-translate-y-2 transition duration-200 text-center">
           {title}
         </h2>
+<<<<<<< HEAD
         <h2 className="text-white opacity-0 group-hover/canvas-card:opacity-100 relative z-10 mt-4 font-bold group-hover/canvas-card:-translate-y-2 transition duration-200 text-center text-sm" style={{ color: "#e4ecff" }}>
+=======
+        <h2
+          className="text-sm dark:text-white opacity-0 group-hover/canvas-card:opacity-100 relative z-10 text-black mt-4  font-bold group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200 text-center"
+          style={{ color: "#e4ecff" }}
+        >
+>>>>>>> 5bb81ed (removed vercel analytics)
           {description}
         </h2>
       </div>
@@ -108,8 +143,12 @@ const AceternityIcon = ({ order }: { order: string }) => {
   return (
     <div>
       <button className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+<<<<<<< HEAD
         {/* Removed spinning animation - now static gradient background */}
         <span className="absolute inset-[-1000%] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+=======
+        <span className="absolute inset-[-1000%] group-hover:animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+>>>>>>> 5bb81ed (removed vercel analytics)
         <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-5 py-2 font-bold text-white backdrop-blur-3xl text-2xl">
           {order}
         </span>
@@ -134,4 +173,8 @@ export const Icon = ({ className, ...rest }: any) => {
   );
 };
 
+<<<<<<< HEAD
 export default Approach;
+=======
+export default Approach;
+>>>>>>> 5bb81ed (removed vercel analytics)

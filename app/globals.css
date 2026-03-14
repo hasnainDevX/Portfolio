@@ -2,13 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.cdnfonts.com/css/general-sans");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: "General Sans", sans-serif;
   scroll-behavior: smooth;
   color-scheme: dark;
 }
@@ -68,13 +69,13 @@
 }
 
 @media (max-width: 490px) {
-  .new{
+  .new {
     flex-direction: column !important;
   }
-  .btn{
+  .btn {
     width: 10rem !important;
   }
-  .f-btn{
+  .f-btn {
     width: 10.45rem !important;
   }
 }
@@ -84,7 +85,23 @@
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
 }
+<<<<<<< HEAD
 
+=======
+.h3-light {
+  color: #7c3aed;
+}
+
+.bg-dot-indigo {
+  background-color: #ae8dfc; /* Tailwind's indigo-500 */
+  background-image: radial-gradient(
+    circle,
+    rgba(7, 4, 36, 0.164) 1px,
+    transparent 2px
+  );
+  background-size: 15px 15px; /* Adjust the size of the dots */
+}
+>>>>>>> 5bb81ed (removed vercel analytics)
 
 @layer base {
   * {
@@ -135,7 +152,41 @@
   transform: translateZ(0);
 }
 
+<<<<<<< HEAD
 /* @keyframes mulShdSpin {
+=======
+/* button component */
+.btn {
+  @apply flex gap-4 items-center justify-center cursor-pointer p-3 rounded-md bg-black-300  transition-all active:scale-95 text-white mx-auto;
+}
+
+.btn-ping {
+  @apply animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75;
+}
+
+.btn-ping_dot {
+  @apply relative inline-flex rounded-full h-3 w-3 bg-green-500;
+}
+
+/* clients section */
+.client-container {
+  @apply grid md:grid-cols-2 grid-cols-1 gap-5 mt-12;
+}
+
+.client-review {
+  @apply rounded-lg md:p-10 p-5 col-span-1 bg-black-300 bg-opacity-50;
+}
+
+.client-content {
+  @apply flex lg:flex-row flex-col justify-between lg:items-center items-start gap-5 mt-7;
+}
+
+.c-space {
+  @apply sm:px-10 px-5;
+}
+
+@keyframes mulShdSpin {
+>>>>>>> 5bb81ed (removed vercel analytics)
   0%,
   100% {
     box-shadow: 0em -2.6em 0em 0em #ffffff,

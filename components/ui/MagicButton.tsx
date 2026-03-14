@@ -19,9 +19,11 @@ const MagicButton = ({
         onClick={handleClick}
         className="relative inline-flex h-12 overflow-hidden rounded-lg p-[1px] focus:outline-none md:w-60 md:mt-10 f-btn sm:w-[46%]"
       >
+        <div className="absolute transition-all duration-200 rounded-full -inset-px bg-gradient-to-r from-cyan-500 to-purple-500 group-hover:shadow-lg group-hover:shadow-cyan-500/50"></div>
         <span
           className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]"
         />
+      
         <span
           className={`inline-flex h-full cursor-pointer items-center justify-center rounded-xl bg-slate-950 hover:bg-slate-900 px-5 text-sm font-medium text-white backdrop-blur-3xl gap-2 ${otherClasses}`}
         >
@@ -29,7 +31,7 @@ const MagicButton = ({
           {title}
           {position === "right" && icon}
         </span>
-      </button>
+      </button>      
     </div>
   );
 };
